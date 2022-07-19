@@ -13,11 +13,11 @@ int main(int argc,const char* argv[])
 	}
 	for(int i=1;i<year;i++)
 	{
-			sum = sum + 365 + (year%4 == 0&& year%100 != 0 || year%400 == 0);
+			sum = sum + 365 + (i%4 == 0&& i%100 != 0 || i%400 == 0);
 	}
 	for(int j=1;j<month;j++)
 	{
-		switch (month)
+		switch (j)
 		{
 			case 2: sum = sum + 28 + (year%4 == 0&& !year%100 == 0 || year%400 == 0);break;
 			case 4:
